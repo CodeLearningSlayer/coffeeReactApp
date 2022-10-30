@@ -1,0 +1,16 @@
+.about{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    &__title{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__inner{
+        margin: 0 auto;
+        text-align: center;
+        max-width: 590px
+    }
+    &__inner-text + .about__inner-text{
+        margin-top: 15px;
+    }
+}
