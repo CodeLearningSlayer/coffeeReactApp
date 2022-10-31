@@ -1,0 +1,15 @@
+.goods{
+    &__top-search{
+        margin-right: 81px;
+    }
+    &__top-input{
+        margin-left: 19px;
+        padding: 6px 10px 6px 25px;
+        max-width: 180px;
+        height: 30px;
+        width: 100%;
+        border:none;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+}

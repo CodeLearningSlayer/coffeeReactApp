@@ -1,0 +1,23 @@
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-info{
+    margin-left: 60px;
+    max-width: 350px;
+    text-align: center;
+    &--main{
+        max-width: 600px;
+        margin-left: 0;
+    }
+    &--single{
+        text-align: left;
+    }
+}
+
+.beans{
+    &__about{
+        padding-bottom: 60px;
+    }
+}

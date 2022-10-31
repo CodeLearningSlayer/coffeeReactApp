@@ -1,0 +1,40 @@
+.product{
+    padding: 30px 27px 22px;
+    background-color: #fff;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+    max-width: 240px;
+    width: 100%;
+    color:#000;
+    &__img-box{
+        margin: 0 auto;
+        width: 151px;
+        height: 115px;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+    }
+    &__name{
+        text-align: center;
+        margin-top: 14px;
+    }
+    &__country,
+    &__price{
+        text-align: right;
+        margin-top: 14px;
+    }
+    &__price{
+        font-weight: 700;
+    }
+}
+
+.goods{
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 70px; 
+        margin: 0 auto;
+        max-width: 850px;
+    }
+}

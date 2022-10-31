@@ -23,3 +23,20 @@
         }
     }
 }
+
+.separation-line{
+    margin: 0 auto;
+    width: 240px;
+    height: 1px;
+    background-color: #000;
+}
+
+.goods{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__top{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+}

@@ -3,7 +3,7 @@ import "./headerCommon.scss"
 const HeaderCommon = (props) => {
     const {bg, title, type} = props;
     return (
-        <header className={`header ${type === 'entered' ? '' : 'header-page'}`} style={{'backgroundImage' : bg}}>
+        <header className={`header ${type === 'entered' ? '' : 'header-page'}`} style={{'backgroundImage' : `url(${bg})`}}>
             <div className="container">
                 <nav className="header-page__nav nav">
                     <a href="#" className="nav__item nav__item--first">Coffee house</a>

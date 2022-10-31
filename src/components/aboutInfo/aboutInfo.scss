@@ -13,4 +13,14 @@
     &__inner-text + .about__inner-text{
         margin-top: 15px;
     }
+    &__inner-text{
+        white-space: pre-line;
+    }
+}
+
+
+.about-info{
+    &--main{
+        max-width: 600px;
+    }
 }

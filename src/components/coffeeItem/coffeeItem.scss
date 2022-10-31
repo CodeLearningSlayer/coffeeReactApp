@@ -1,0 +1,21 @@
+.coffee{
+    padding-bottom: 0;
+    &__about{
+        display: flex;
+        align-items: center;
+    }
+    &__about-info{
+        max-width: 420px;
+        margin-left: 30px;
+    }
+    &__about-text{
+        margin-bottom: 16px;
+        span{
+           font-weight: 700; 
+           font-size: 14px;
+        }
+    }
+    &__about-text--price{
+        font-size: 24px;
+    }
+}

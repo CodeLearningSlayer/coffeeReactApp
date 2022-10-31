@@ -23,8 +23,6 @@ const MainPage = () => {
             <section className="best">
                 <BestItems/>
             </section>
-
-
             <AppFooter/>
         </>
         
