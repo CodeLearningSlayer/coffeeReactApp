@@ -7,7 +7,7 @@ const AboutInfo = (props) => {
 
     return (
         <>
-            <div className={`about-info${(textFirst && textSecond) ? ' about-info--main' : ''} ${classes}`}>
+            <div className={`about-info ${classes ?? ""}`}>
                 <h2 className="about__title title">{title}</h2>
                     <AppSeparator type="black"/>
                     { html ? html : 

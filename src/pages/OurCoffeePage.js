@@ -12,8 +12,6 @@ import { Outlet } from "react-router-dom";
 
 const OurCoffeePage = () => {
 
-    const [filter, setFilter] = useState("all");
-
     return(
         <>
             <AboutBlock img={aboutBeans} 
@@ -21,7 +19,8 @@ const OurCoffeePage = () => {
                         text={
                            "Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. \n Afraid at highly months do things on at.Situation recommend objection do intention so questions. \n As greatly removed calling pleased improve an. Last ask him cold feel \n met spot shy want. Children me laughing we prospect answered followed. At it went is song that held help face."
                         }
-                        title="About our beans"/>
+                        title="About our beans"
+                        classes="about-info--upper"/>
             <div className="separation-line"></div>
                 <section className="goods">
                     <div className="goods__top">
@@ -29,7 +28,6 @@ const OurCoffeePage = () => {
                         <AppFilters/>
                     </div>
                     <ItemList/>
-                    <Outlet/>
                 </section>
         </>
     )

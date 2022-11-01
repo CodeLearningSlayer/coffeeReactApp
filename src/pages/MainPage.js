@@ -2,10 +2,19 @@ import HeaderMainPage from "../components/headerMainPage/HeaderMainPage";
 import AboutInfo from "../components/aboutInfo/AboutInfo";
 import BestItems from "../components/bestItems/BestItems";
 import AppFooter from "../components/appFooter/AppFooter";
+import {Helmet} from "react-helmet"
 
 const MainPage = () => {
     return (
         <>
+
+            <Helmet>
+                <meta
+                    name="Our coffee"
+                    content="Main page"
+                />
+                <title>Coffee house</title>
+            </Helmet>        
             <HeaderMainPage/>
             <section className="about">
                 <AboutInfo title="About us" textFirst="Extremity sweetness difficult behaviour he of. On disposal of as
@@ -18,7 +27,7 @@ const MainPage = () => {
             yourself unpacked. Pleasant horrible but confined day end marriage.
             Eagerness furniture set preserved far recommend. Did even but nor
             are most gave hope. Secure active living depend son repair day
-            ladies now."/>
+            ladies now." classes="about-info--main"/>
             </section>
             <section className="best">
                 <BestItems/>
