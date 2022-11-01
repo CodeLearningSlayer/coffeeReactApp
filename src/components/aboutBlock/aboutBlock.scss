@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .about-info{
     margin-left: 60px;
@@ -16,6 +17,10 @@
     }
     &--single{
         text-align: left;
+    }
+    &--mainpage{
+        max-width: 600px;
+        margin-left: 0;
     }
 }
 

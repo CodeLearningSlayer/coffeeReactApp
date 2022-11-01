@@ -27,7 +27,7 @@ const MainPage = () => {
             yourself unpacked. Pleasant horrible but confined day end marriage.
             Eagerness furniture set preserved far recommend. Did even but nor
             are most gave hope. Secure active living depend son repair day
-            ladies now." classes="about-info--main"/>
+            ladies now." classes="about-info--mainpage"/>
             </section>
             <section className="best">
                 <BestItems/>
