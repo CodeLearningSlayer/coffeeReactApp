@@ -1,3 +1,3 @@
 # First react app
 
-Simple app with transitions etc.
+Simple coffee app etc.
