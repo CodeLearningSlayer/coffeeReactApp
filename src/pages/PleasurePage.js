@@ -33,6 +33,7 @@ const PleasurePage = ({items, filterItems, searchItem}) => {
             <section className="goods">
                 <ItemList/>
             </section>
+            
             <AppFooter/>
         </>
     )
