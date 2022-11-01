@@ -1,4 +1,5 @@
-import "./headerCommon.scss"
+import { Link } from "react-router-dom";
+import "./headerCommon.scss";
 
 const HeaderCommon = (props) => {
     const {bg, title, type} = props;
@@ -6,9 +7,9 @@ const HeaderCommon = (props) => {
         <header className={`header ${type === 'entered' ? '' : 'header-page'}`} style={{'backgroundImage' : `url(${bg})`}}>
             <div className="container">
                 <nav className="header-page__nav nav">
-                    <a href="#" className="nav__item nav__item--first">Coffee house</a>
-                    <a href="#" className="nav__item">Our coffee</a>
-                    <a href="#" className="nav__item">For your pleasure</a>
+                    <Link to="/" className="nav__item nav__item--first">Coffee house</Link>
+                    <Link to="/coffee" className="nav__item">Our coffee</Link>
+                    <Link to="/goods" className="nav__item">For your pleasure</Link>
                 </nav>
             <h1 className="header__title">{title}</h1>
             </div>

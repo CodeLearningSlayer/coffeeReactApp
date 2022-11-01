@@ -8,14 +8,14 @@ import AppSearch from "../components/appSearch/AppSearch"
 import AppFilters from "../components/appFilters/AppFilters";
 import ItemList from "../components/itemList/ItemList";
 import AppFooter from "../components/appFooter/AppFooter";
+import { Outlet } from "react-router-dom";
 
-const OurCoffeePage = ({coffeeData, items, filterItems, searchItem}) => {
+const OurCoffeePage = () => {
 
     const [filter, setFilter] = useState("all");
 
     return(
         <>
-            <HeaderCommon title="Our coffee" bg={bg}/>
             <AboutBlock img={aboutBeans} 
                         alt="girl with coffee"
                         text={
@@ -29,8 +29,8 @@ const OurCoffeePage = ({coffeeData, items, filterItems, searchItem}) => {
                         <AppFilters/>
                     </div>
                     <ItemList/>
+                    <Outlet/>
                 </section>
-            <AppFooter/>
         </>
     )
 }

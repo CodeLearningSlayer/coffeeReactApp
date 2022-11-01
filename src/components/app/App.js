@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import "../../style/style.scss";
 import MainPage from '../../pages/MainPage';
 import OurCoffeePage from "../../pages/OurCoffeePage";
@@ -9,6 +10,7 @@ import firstImg from "../../resources/best/1.png"
 import secondImg from "../../resources/best/2.png";
 import thirdImg from "../../resources/best/3.png";
 import Context from "../../context";
+import CoffeePage from "../../pages/CoffeePage";
 
 const App = () => {
 
@@ -17,41 +19,49 @@ const App = () => {
         name:'AROMISTICO Coffee 1 kg',
         country: 'Brazil',
         price: '6.39$',
-        img: firstImg
+        img: firstImg,
+        description: "Aromistico coffee. Great flavor."
     },
     {
         name:'Jacobs Coffee 1 kg',
         country: 'Kenya',
         price: '6.39$',
-        img: secondImg
+        img: secondImg,
+        description: "Jacobs coffee. Great flavor."
     },
     {
         name:'Nescafe Coffee 1 kg',
         country: 'Columbia',
         price: '6.39$',
-        img: thirdImg
+        img: thirdImg,
+        description: "Nescafe coffee. Great flavor."
     },
     {
         name:'Egoist Coffee 1 kg',
         country: 'Brazil',
         price: '6.39$',
-        img: firstImg
+        img: firstImg,
+        description: "Egoist Coffee. Great flavor."
     },
     {
         name:'Ambassador Coffee 1 kg',
         country: 'Kenya',
         price: '6.39$',
-        img: secondImg
+        img: secondImg,
+        description: "Ambassador coffee. Great flavor."
     },
     {
-        name:'Samur Coffee 1 kg',
+        name:'Samurai Coffee 1 kg',
         country: 'Columbia',
         price: '6.39$',
-        img: thirdImg
-    },
+        img: thirdImg,
+        description: "Samurai coffee. Great flavor."
+    }
 ]
 
 const [items, setItems] = useState(coffeeData);
+const [filter, setFilter] = useState("all");
+
 
 const filterItems = (items, filter) => {
   switch(filter){
@@ -70,6 +80,7 @@ const filterItems = (items, filter) => {
       default:
           return items;
   }
+  setFilter(filter);
 }
 
 const searchItem = (searchStr) => {
@@ -82,15 +93,26 @@ const searchItem = (searchStr) => {
 }
 
   return (
-    <div className="App">
-      {/* <MainPage/> */}
-      {/* <SingleCoffeePage/> */}
-      <Context.Provider value={{coffeeData, items, filterItems, searchItem}}>
-        {/* <OurCoffeePage/> */}
-        <PleasurePage/>
+    <Router>
+      <div className="App">
+        <main>
+          <Context.Provider value={{coffeeData, items, filterItems, searchItem, filter}}>
+          <Routes>
+            <Route path="/" element={<MainPage/>}/> 
+            <Route path="/coffee" element={<CoffeePage/>}>
+              <Route index element={<OurCoffeePage/>}/>
+              <Route path=":name" element={<SingleCoffeePage/>}/>
+            </Route>
+            <Route path="/goods" element={<PleasurePage/>}/>
+          </Routes>
+         
       </Context.Provider>
+        </main>
+      
       
     </div>
+    </Router>
+    
   );
 }
 

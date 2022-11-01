@@ -13,11 +13,11 @@ const AppFilters = (props) => {
         {name: 'all', label: "All"}
     ]
 
-    const {items, filterItems} = useContext(Context);
+    const {items, filterItems, filter} = useContext(Context);
 
     const buttons = buttonsData.map(({name, label}) => {
 
-        const active = props.filter === name;
+        const active = filter === name;
         const clazz = active ? " filter--active" : "";
         return (
             <button className={`goods__top-filter${clazz}`}

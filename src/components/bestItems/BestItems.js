@@ -1,18 +1,23 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 import first from "../../resources/best/1.png";
 import second from "../../resources/best/2.png";
 import third from "../../resources/best/3.png";
 import "./bestItems.scss";
+import Context from "../../context";
 
-function renderItems(images, names, prices) {
-    const elements = images.map((image, i) => {
+
+function renderItems(coffeeData) {
+    const elements = coffeeData.map(({img, name, price}, i) => {
+        if (i>2) return;
         return (
-            <a href="#" key={i} className="best__products-item item">
+            <Link to={`/coffee/${name}`} key={i} className="best__products-item item">
                 <div className="item__img-box">
-                    <img src={image} alt="coffee-item" className="item__img"/>
+                    <img src={img} alt="coffee-item" className="item__img"/>
                 </div>
-                <p className="item__name">{names[i]}</p>
-                <p className="item__price">{prices[i]}</p>
-            </a>
+                <p className="item__name">{name}</p>
+                <p className="item__price">{price}</p>
+            </Link>
         )
     });
     return elements;
@@ -20,11 +25,10 @@ function renderItems(images, names, prices) {
 
 const BestItems = () => {
 
-    const names = ['Solimo Coffee Beans 2 kg', 'Presto Coffee Beans 1 kg', 'AROMISTICO Coffee 1 kg'];
-    const prices = ['10.73$', '15.99$', '6.99$'];
-    const images = [first, second, third];
+    const {coffeeData} = useContext(Context);
 
-    const items = renderItems(images, names, prices);
+
+    const items = renderItems(coffeeData);
 
     return (
         <>
